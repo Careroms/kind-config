@@ -1,6 +1,6 @@
 apiVersion: kind.x-k8s.io/v1alpha4
 kind: Cluster
-name: base-cluster
+name: monitoring-test
 kubeadmConfigPatches:
 - |-
   kind: ClusterConfiguration
@@ -25,4 +25,6 @@ kubeadmConfigPatches:
   metricsBindAddress: 0.0.0.0
 nodes:
 - role: control-plane
+- role: worker
+- role: worker
 - role: worker
