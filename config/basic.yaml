@@ -4,4 +4,7 @@ name: basic-kind
 nodes:
   - role: control-plane
   - role: worker
+    labels:
+      app: jenkins
+  - role: worker
   - role: worker
